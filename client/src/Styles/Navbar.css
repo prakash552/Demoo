@@ -1,0 +1,218 @@
+.main-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1.5rem 0.89rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Transparent state for home page */
+.main-navbar.transparent {
+  background: transparent !important;
+  box-shadow: none !important;
+
+}
+
+
+
+/* Scrolled navbar */
+.main-navbar.scrolled {
+  background-color: #3c433b;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+
+}
+
+/* Logo */
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo a {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #05edd5;
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  font-size: 18px;
+  color: #34e3bd;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+/* Active nav link styling */
+.nav-links .active-link {
+  color: #ffffff;
+  border-bottom: 2px solid #c5efcb;
+  padding-bottom: 2px;
+  font-weight: 600;
+}
+
+/* Login Button */
+.nav-links .login-btn {
+  border: 1px solid #c5efcb;
+  border-radius: 4px;
+  padding: 4px 14px;
+  font-weight: 600;
+  transition: 0.3s ease;
+  margin-right: 20px;
+  color: #c5efcb;
+}
+
+.nav-links .login-btn:hover {
+  background-color: #c5efcb;
+  color: #3c433b !important;
+}
+
+/* Mobile Menu Icon */
+.menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #c5efcb;
+}
+
+
+.count-badge {
+  background-color: #c5efcb; /* light green */
+  color: #3c433b; /* dark green */
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  margin-left: 6px;
+  min-width: 20px;
+  text-align: center;
+  display: inline-block;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.count-badge:hover {
+  background-color: #a7d9a0;
+  color: #2a2f24;
+}
+.badge-mobile{
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links  {
+    position: absolute;
+    top: 110px;
+    margin-right: 10px;
+    background-color: #3c433b;
+    flex-direction: column;
+    padding-left: 40px;
+    display: none;
+   width:90vw;
+
+  }
+  .nav-links a {
+    padding: 10px 0;
+    color: #c5efcb;
+    font-size: 1.2rem;
+    gap:10px;
+  
+  }
+  .nav-links.open {
+    display: flex;
+    animation: slideDown 0.3s ease-in-out;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .menu-icon {
+    display: block;
+    padding: 20px;
+ 
+  }
+
+  .nav-links .login-btn {
+    margin: 15px 0;
+    width: 80%;
+    text-align: center;
+  }
+
+
+
+}
+
+/* Animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hide mobile badges inside menu */
+@media (max-width: 768px) {
+  .nav-links .count-badge {
+    display: none;
+
+  }
+
+  /* Fixed position badges near menu icon */
+  .badge-mobile {
+    position: fixed;
+    top: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 8px 10px;
+    border-radius: 12px;
+    color: #3c433b;
+    background-color: none;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+    user-select: none;
+    z-index: 1100;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+   border: 2px solid #c5efcb;
+   display: block;
+
+  }
+  .badge-mobile:hover {
+    background-color: #a7d9a0;
+    color: #2a2f24;
+  }
+
+  .wishlist-badge {
+    right: 50px; 
+   top: 40px;
+   color: #05edd5;
+  }
+
+  .cart-badge {
+    right: 100px;
+    top: 40px;
+    color: #34e3bd;
+  }
+}
+
+/* Make sure badges hidden on desktop as they show in nav */
+

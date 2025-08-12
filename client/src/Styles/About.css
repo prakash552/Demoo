@@ -132,3 +132,7 @@
 .shop-now-btn:hover {
   background-color: #e94d4d;
 }
+
+@media (max-width:768px){
+  
+}

@@ -133,6 +133,12 @@ h2 {
 /* Responsive */
 @media (max-width: 768px) {
   .cart-container {
-    flex-direction: column;
+    flex-direction: wrap;
+
+
   }
+  .cart-page {
+padding: 10px;
+
+}
 }

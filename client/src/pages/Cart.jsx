@@ -57,9 +57,7 @@ export default function Cart() {
               <label>
                 <input type="radio" name="payment" /> UPI / Net Banking
               </label>
-              <label>
-                <input type="radio" name="payment" /> Credit/Debit Card
-              </label>
+              
             </div>
 
             <button className="checkout-btn">Proceed to Checkout</button>

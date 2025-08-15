@@ -107,13 +107,20 @@
 
 @media (max-width: 768px) {
   .footer-content {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row;
+    text-align: left;
   }
   .subscribe-form {
-    flex-direction: column;
+    flex-direction: row;
+
   }
+
   .subscribe-form button {
-    width: 100%;
+    width: 30%;
+  }
+  .footer-bottom{
+  padding :0px;
+    border :2px solid #05edd5;
+   margin-top: 20px;
   }
 }

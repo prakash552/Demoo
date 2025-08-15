@@ -117,6 +117,10 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+
+  .main-navbar{
+    padding:  1rem 0.95rem;
+  }
   .nav-links  {
     position: absolute;
     top: 110px;
@@ -128,6 +132,7 @@
    width:90vw;
 
   }
+
   .nav-links a {
     padding: 10px 0;
     color: #c5efcb;
